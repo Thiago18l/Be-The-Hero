@@ -2,7 +2,17 @@ const connection = require('../database/connection');
 
 module.exports = {
     async index(req, res){
-        const incidents = await connection('incidents').select('*');
+        const { page = 1 } =req.query;
+        //contador de casos
+        const [count] = await connection('incidents')
+        .count();
+
+        const incidents = await connection('incidents')
+        .limit(5)
+        .offset((page -1) * 5)
+
+        res.header('X-Total-Count', count['count(*)']);
+        
         return res.json(incidents);      
     },
     async create(req, res){
