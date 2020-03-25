@@ -1,4 +1,5 @@
 const express = require('express');
+const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3333;
@@ -7,23 +8,7 @@ const PORT = process.env.PORT || 3333;
  *  para receber arquivos no formato .json
  */
 app.use(express.json());
-
-
-app.get('/', (req, res) => {
-    res.json({
-        nome: 'THIAGO',
-    })
-});
-
-app.post('/users', (req, res) => {
-    const body = req.body;
-
-    console.log(body);
-
-    return res.json({
-        aluno: 'Thiago'
-    })
-});
+app.use(routes);
 
 
 app.listen(PORT, () => {
