@@ -13,9 +13,9 @@ export default function Register(){
                     <img src={Logo} alt="Be the Hero" />
                     <h1>Cadastro</h1>
                     <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
-                    <Link className="back-link" to="/register">
+                    <Link className="back-link" to="/">
                             <FiArrowLeft size={24} color="#E02041"/>
-                            Não tenho cadastro.
+                            Já sou cadastrado.
                         </Link>
                </section>
                 <form action="">
