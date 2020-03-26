@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;   
     justify-content: space-around;
+    
 }
 .profile-container header span {
     font-size: 20px;
@@ -80,4 +81,8 @@
     color: #737380;
     line-height: 21px;
     font-size: 16px;
+}
+.profile-container .button-delete {
+    background: transparent;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
 }

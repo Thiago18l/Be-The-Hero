@@ -10,7 +10,7 @@ import NewIncident from './pages/NewIncident/index';
 export default function Routes(){
     return (
         <BrowserRouter>
-            <Switch> // Switch para chamar apenas 1 rota por vez
+            <Switch> 
                 <Route path="/" exact component={Logon}/>
                 <Route path="/register" component={Register} />
                 <Route path="/profile" component={Profile} />
