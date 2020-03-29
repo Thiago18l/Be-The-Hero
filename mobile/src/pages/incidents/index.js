@@ -5,17 +5,19 @@ import { View, Image, Text } from 'react-native';
 //logos
 import LogoImg from '../../assets/logo.png'
 // style
-import style from './style';
+import styles from './styles';
 
 export default function Incidents(){
     return (
-        <View style={style.container}>
-            <View style={style.header}>
+        <View style={styles.container}>
+            <View style={styles.header}>
                 <Image source={LogoImg} />
-                <Text style={style.headerText}>
-                    Total de <Text style={style.headerTextBold}>0 Casos</Text>.
+                <Text style={styles.headerText}>
+                    Total de <Text style={styles.headerTextBold}>0 Casos</Text>.
                 </Text>
             </View>
+            <Text style={styles.title}>Bem vindo</Text>
+            <Text style={styles.description}>Escolha um dos casos abaixo e salve o dia!</Text>
         </View>
     )
 }
